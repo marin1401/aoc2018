@@ -13,10 +13,7 @@ print(sum(frequencies))
 
 freq_set = set()
 len_frequencies = len(frequencies)
-i = 0
-j = 0
-k = 1
-freq = 0
+i, j, k, freq = 0, 0, 1, 0
 while i == len(freq_set):
     freq += frequencies[j]
     freq_set.add(freq)
