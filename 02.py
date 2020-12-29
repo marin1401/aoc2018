@@ -7,8 +7,7 @@ boxes = [i.strip() for i in inputlines]
 
 #Part 1
 
-twice = 0
-thrice = 0
+twice, thrice = 0, 0
 for box in boxes:
     appearances = {i: box.count(i) for i in set(box)}
     if 2 in appearances.values():
