@@ -10,10 +10,10 @@ boxes = [i.strip() for i in inputlines]
 twice = 0
 thrice = 0
 for box in boxes:
-    appearences = {i: box.count(i) for i in set(box)}
-    if 2 in appearences.values():
+    appearances = {i: box.count(i) for i in set(box)}
+    if 2 in appearances.values():
         twice += 1
-    if 3 in appearences.values():
+    if 3 in appearances.values():
         thrice += 1
         
 print(twice * thrice)
