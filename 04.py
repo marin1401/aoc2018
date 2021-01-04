@@ -6,7 +6,7 @@ with open('./04.txt') as myinput:
 sorted_inputlines = sorted(inputlines)
 
 sleep_records = {}
-for current_line, next_line in zip(sorted_inputlines[:-1], sorted_inputlines[1:]):
+for current_line, next_line in zip(sorted_inputlines, sorted_inputlines[1:]):
     current_line = current_line.split()
     next_line = next_line.split()
     if current_line[2] == 'Guard':
