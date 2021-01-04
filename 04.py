@@ -7,7 +7,8 @@ sorted_inputlines = sorted(inputlines)
 
 sleep_records = {}
 for current_line, next_line in zip(sorted_inputlines[:-1], sorted_inputlines[1:]):
-    current_line, next_line = current_line.split(), next_line.split()
+    current_line = current_line.split()
+    next_line = next_line.split()
     if current_line[2] == 'Guard':
         key = (next_line[0][-5:], int(current_line[3][1:]))
         sleep_records[key] = [0 for i in range(60)]
@@ -32,4 +33,4 @@ print(next(k * v[1] for k, v in sleep_highscore.items() if v[0] == max(sleep_hig
 
 #Part 2
 
-print(next(k * v.index(max(v)) for k, v in sleep_sum.items() if max([max(i) for i in sleep_sum.values()]) in v))
+print(next(k * v.index(max(v)) for k, v in sleep_sum.items() if max(max(i) for i in sleep_sum.values()) in v))
