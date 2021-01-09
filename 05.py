@@ -20,8 +20,4 @@ print(reactions(polymer))
 
 #Part 2
 
-polymer_lengths = set()
-for letter in string.ascii_lowercase:
-    polymer_lengths.add(reactions(polymer.replace(letter, '').replace(letter.upper(), '')))
-
-print(min(polymer_lengths))
+print(min(reactions(polymer.replace(letter, '').replace(letter.upper(), '')) for letter in string.ascii_lowercase))
