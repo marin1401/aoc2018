@@ -6,8 +6,8 @@ with open('./05.txt') as myinput:
     polymer = myinput.read()
 
 def reactions(polymer):
-    resulting_polymer = ['_', polymer[0]]
-    for unit in polymer[1:]:
+    resulting_polymer = ['_']
+    for unit in polymer:
         if resulting_polymer[-1] != unit and resulting_polymer[-1].lower() == unit.lower():
             resulting_polymer.pop()
         else:
