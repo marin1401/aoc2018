@@ -1,12 +1,12 @@
 #Day 06
 
-with open('./06.txt') as myinput:
+with open('./061.txt') as myinput:
     coords_list = myinput.readlines()
 
 coords = {i: tuple(map(int, (coord.strip().split(', ')))) for i, coord in enumerate(coords_list)}
 
-x_min, *_, x_max = sorted(coord[0] for coord in coords.values())
-y_min, *_, y_max = sorted(coord[1] for coord in coords.values())
+x_min, *_, x_max = sorted(x for (x, y) in coords.values())
+y_min, *_, y_max = sorted(y for (x, y) in coords.values())
 
 x_range = range(x_min, x_max + 1)
 y_range = range(y_min, y_max + 1)
