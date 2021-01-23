@@ -20,7 +20,7 @@ grid = [[get_closest_point(x, y, coords) for x in x_range] for y in y_range]
 
 points_closest_to_border = set([line[0] for line in grid] + [line[-1] for line in grid] + grid[0] + grid[-1])
 
-valid_points = [point for point in coords.keys() if point not in points_closest_to_border]
+valid_points = (point for point in coords.keys() if point not in points_closest_to_border)
 
 #Part 1
 
